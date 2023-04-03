@@ -1,1 +1,2 @@
-node_modules
+answers/content/big.txt
+*/**/node_modules
