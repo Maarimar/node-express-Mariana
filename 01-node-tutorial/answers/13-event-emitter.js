@@ -1,8 +1,13 @@
+const EventEmitter = require('events');
 
-const _ = require('lodash');
+const costumeEmitter = new EventEmitter();
 
-const items = [1, [2,[3,[4]]]];
+costumeEmitter.on('response', (name, id)=>{
+    console.log(`data recieved ${name} with id:${id}`)
+})
 
-const newItems = _.flatMapDeep(items);
+costumeEmitter.on('response', ()=>{
+    console.log(`some other logic here`)
+})
 
-console.log(newItems);
+costumeEmitter.emit('response', 'Mariana', 34)
