@@ -14,4 +14,6 @@ const serverTry = http.createServer((req, res)=>{
 
 })
 
-serverTry.listen(4000)
+serverTry.listen(4000, ()=>{
+  console.log('Server Listening on port 4000')
+})
